@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sarimax-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sarimax
+  template:
+    metadata:
+      labels:
+        app: sarimax
+    spec:
+      containers:
+        - name: sarimax-container
+          image: cic483/sarimax-app:latest
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
