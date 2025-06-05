@@ -1,3 +1,6 @@
-def test_addition (a, b):
-    return a + b
+
+import pytest
+
+def test_addition():
+    assert (2 + 2) == 4
 
