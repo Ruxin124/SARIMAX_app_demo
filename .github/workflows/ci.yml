@@ -26,7 +26,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests/
+        pytest SARIMAX_app_demo/tests/
 
     - name: Log in to DockerHub
       uses: docker/login-action@v3
